@@ -1,0 +1,105 @@
+
+		body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+header {
+    background: #333;
+    color: #fff;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+header nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+header nav ul li {
+    display: inline;
+    margin: 0 1rem;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+section {
+    padding: 2rem;
+    text-align: center;
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.gallery img {
+          width: calc(33% - 1rem);
+    max-width: 300px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+.gallery img {
+    width: 100%; /* 或者你想要的任何固定宽度 */
+    height: 200px; /* 或者你想要的任何固定高度 */
+    object-fit: cover; /* 图片会保持比例，并裁剪以适应容器 */
+    object-position: center; /* 图片的中心点会对齐到容器的中心点 */
+}
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+}
+
+.gallery {
+    display: grid;
+
+    gap: 16px;
+    width: 90%;
+    max-width: 1200px;
+}
+
+.gallery-item {
+    overflow: hidden; /* 防止图片放大时超出容器 */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease; /* 平滑过渡效果 */
+}
+
+.gallery-item img {
+    width: 100%;
+    height: auto;
+    display: block; /* 移除图片底部的间隙 */
+    transition: transform 0.3s ease; /* 平滑过渡效果 */
+}
+
+/* 鼠标滑过时的放大效果 */
+.gallery-item:hover {
+    transform: scale(1.05); /* 稍微放大容器 */
+}
+
+.gallery-item:hover img {
+    transform: scale(1.1); /* 图片放大更多一些 */
+}
